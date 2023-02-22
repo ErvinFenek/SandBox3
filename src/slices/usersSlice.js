@@ -33,9 +33,9 @@ export const usersSlice = createSlice({
     //     dispatch(setAdmin({ id: userId, isAdmin: true/false }))
     },
     extraReducers: {
-        [fetchUsers.fulfilled]: (state, action) => {
-            console.log(action.payload);
-            state.list = action.payload;
+        [fetchUsers.fulfilled]: (state, { payload }) => {
+            console.log(payload);
+            state.list = payload;
         }
     },
 });
